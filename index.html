@@ -1,12 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kontakt</title>
 </head>
+
 <body>
-    
+    <section class="contact-wrapper">
+        <form action="" class="contact-form">
+
+            <h3 class="contact-form__title">Skontaktuj się z nami</h3>
+
+            <label for="name" class="label">Podaj swoje imię</label>
+            <input type="text" name="name" id="name" class="contact-form__name" placeholder="Imię" required>
+
+            <label for="surname" class="label">Podaj swoje nazwisko</label>
+            <input type="text" name="surname" id="surname" class="contact-form__surname" placeholder="Nazwisko"
+                required>
+
+            <label for="mail" class="label">Podaj swój adres e-mail</label>
+            <input type="email" name="mail" id="mail" class="contact-form__name" placeholder="E-mail" required>
+
+            <label for="phone" class="label">Podaj swój tel. komórkowy</label>
+            <input type="number" name="phone" id="phone" class="contact-form__phone" placeholder="Tylko liczby"
+                required>
+
+            <label for="www" class="label">Podaj adres strony do poprawy</label>
+            <input type="url" name="www" id="www" placeholder="http://facebook.com" required>
+
+            <label for="problem" class="label">Powiedz nam co chcesz poprawić na swojej stronie</label>
+            <input type="text" name="problem" id="problem" class="contact-form__problem" required>
+
+            <input type="submit" value="Wyślij wiadomość" class="contact-form__submit">
+        </form>
+    </section>
 </body>
+
 </html>
