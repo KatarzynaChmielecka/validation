@@ -16,23 +16,29 @@
 
             <label for="name" class="label">Podaj swoje imię</label>
             <input type="text" name="name" id="name" class="contact-form__name" placeholder="Imię" required>
+            <p class="contact-form__name-error"></p>
 
             <label for="surname" class="label">Podaj swoje nazwisko</label>
             <input type="text" name="surname" id="surname" class="contact-form__surname" placeholder="Nazwisko"
                 required>
+            <p class="contact-form__surname-error"></p>
 
             <label for="mail" class="label">Podaj swój adres e-mail</label>
             <input type="email" name="mail" id="mail" class="contact-form__name" placeholder="E-mail" required>
+            <p class="contact-form__mail-error"></p>
 
             <label for="phone" class="label">Podaj swój tel. komórkowy</label>
             <input type="number" name="phone" id="phone" class="contact-form__phone" placeholder="Tylko liczby"
                 required>
+            <p class="contact-form__phone-error"></p>
 
             <label for="www" class="label">Podaj adres strony do poprawy</label>
             <input type="url" name="www" id="www" placeholder="http://facebook.com" required>
+            <p class="contact-form__www-error"></p>
 
             <label for="problem" class="label">Powiedz nam co chcesz poprawić na swojej stronie</label>
             <input type="text" name="problem" id="problem" class="contact-form__problem" required>
+            <p class="contact-form__problem-error"></p>
 
             <input type="submit" value="Wyślij wiadomość" class="contact-form__submit">
         </form>
