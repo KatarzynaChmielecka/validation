@@ -114,26 +114,29 @@ let randomNumber = () => {
 
 randomNumber()
 
-let captchaFunction = () => {
+let captchaFunction = (e) => {
+    sendMessage()
+
     if (captchaAnswer.value == answer && firstName.value.length >= 3 && surname.value.length >= 3
         && regMail.test(mail.value) && regTel.test(phone.value) && regWww.test(www.value) && problem.value.length >= 50
     ) {
         console.log('brawo, dobry wynik')
-        window.open('summary.html', 'target="_blank"', 'summary')
+        window.open('summary.html', 'target=_blank', 'summary')
     } else {
         console.log('podaj poprawną odpowiedź lub/i wypełnij poprawnie formularz');
 
-        submit.addEventListener("click", function (event) {
-            event.preventDefault()
-        });
+        e.preventDefault()
+
     }
 
 }
 
 
 
-captchaFunction()
-submit.addEventListener('click', sendMessage);
+// captchaFunction()
+// submit.addEventListener('click', sendMessage);
+
+// submit.addEventListener('click', captchaFunction);
 
 submit.addEventListener('click', captchaFunction);
 
