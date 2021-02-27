@@ -121,7 +121,7 @@ let captchaFunction = (e) => {
         && regMail.test(mail.value) && regTel.test(phone.value) && regWww.test(www.value) && problem.value.length >= 50
     ) {
         console.log('brawo, dobry wynik')
-        window.open('summary.html', 'target=_blank', 'summary')
+        window.open('summary.html', 'target="_blank"', 'summary')
     } else {
         console.log('podaj poprawną odpowiedź lub/i wypełnij poprawnie formularz');
 
