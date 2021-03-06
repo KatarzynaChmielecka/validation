@@ -110,9 +110,18 @@ let randomNumber = () => {
 }
 
 
-
-
 randomNumber()
+
+const summaryFunction = () => {
+    let summaryName = document.querySelector('.summary__name');
+    const summarySurname = document.querySelector('.summary__surname');
+    const summaryMail = document.querySelector('.summary__mail');
+    const summaryPhone = document.querySelector('.summary__phone');
+    const summaryWWW = document.querySelector('.summary__www');
+    const summaryProblem = document.querySelector('.summary__problem');
+
+    summaryName.textContent = firstName.value;
+}
 
 let captchaFunction = (e) => {
     sendMessage()
@@ -121,7 +130,8 @@ let captchaFunction = (e) => {
         && regMail.test(mail.value) && regTel.test(phone.value) && regWww.test(www.value) && problem.value.length >= 50
     ) {
         console.log('brawo, dobry wynik')
-        window.open('summary.html', 'target="_blank"', 'summary')
+        window.open('summary.html', 'target="_blank"');
+
     } else {
         console.log('podaj poprawną odpowiedź lub/i wypełnij poprawnie formularz');
 
@@ -131,13 +141,7 @@ let captchaFunction = (e) => {
 
 }
 
-
-
-// captchaFunction()
-// submit.addEventListener('click', sendMessage);
-
-// submit.addEventListener('click', captchaFunction);
-
 submit.addEventListener('click', captchaFunction);
+
 
 
