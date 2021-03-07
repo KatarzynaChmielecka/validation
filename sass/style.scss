@@ -1,0 +1,80 @@
+$primaryBackground: rgba(255, 255, 255, 0.251);
+$primaryFontSize:10px;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: transparent;
+}
+
+body {
+
+    background-image: url("../images/rain-5213306_1920.jpg");
+    font-size: $primaryFontSize;
+
+    .contact-wrapper {
+        width: 50%;
+        margin: auto;
+
+        .contact-form {
+            background: $primaryBackground;
+            box-shadow: 0 8px 32px 0 #1f26875e;
+            backdrop-filter: blur(4px);
+            border-radius: 10px;
+            border: 1px solid #ffffff2e;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            font-size: 2em;
+            text-align: center;
+            line-height: 1.5;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                width: 60%;
+                border-radius: 10px;
+                backdrop-filter: blur(4px);
+                margin: 10px;
+
+                input,
+                .contact-form__problem {
+                    border: none;
+                    border-radius: 0 0 10px 10px;
+                    background: $primaryBackground;
+                    backdrop-filter: blur(4px);
+                    line-height: 2.3;
+                }
+
+                input::placeholder,
+                textarea::placeholder {
+                    font-style: italic;
+                    font-size: 1em;
+                    text-align: center;
+                }
+            }
+
+            .contact-form__problem {
+                resize: vertical;
+            }
+
+            .contact-form__submit {
+                background: #060128a6;
+                color: #ffffff;
+                padding: 5px 10px;
+                backdrop-filter: blur(4.0px);
+                border-radius: 10px;
+                border: none;
+                font-size: 1em;
+
+                &:hover {
+                    background: #ffffff;
+                    color: #060128a6;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

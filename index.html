@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./sass/style.css">
 </head>
 
 <body>
@@ -15,43 +15,67 @@
 
             <h3 class="contact-form__title">Skontaktuj się z nami</h3>
 
-            <label for="name" class="label">Podaj swoje imię</label>
-            <input type="text" name="name" id="name" class="contact-form__name" placeholder="Imię" required>
-            <p class="contact-form__name-error"></p>
-
-            <label for="surname" class="label">Podaj swoje nazwisko</label>
-            <input type="text" name="surname" id="surname" class="contact-form__surname" placeholder="Nazwisko"
-                required>
-            <p class="contact-form__surname-error"></p>
-
-            <label for="mail" class="label">Podaj swój adres e-mail</label>
-            <input type="email" name="mail" id="mail" class="contact-form__mail" placeholder="E-mail" required>
-            <p class="contact-form__mail-error"></p>
-
-            <label for="phone" class="label">Podaj swój tel. komórkowy</label>
-            <input type="number" name="phone" id="phone" class="contact-form__phone" placeholder="Tylko liczby"
-                required>
-            <p class="contact-form__phone-error"></p>
-
-            <label for="www" class="label">Podaj adres strony do poprawy</label>
-            <input type="url" name="www" id="www" class="contact-form__www" placeholder="http://facebook.com" required>
-            <p class="contact-form__www-error"></p>
-
-            <label for="problem" class="label">Powiedz nam co chcesz poprawić na swojej stronie</label>
-            <input type="text" name="problem" id="problem" class="contact-form__problem" required>
-            <p class="contact-form__problem-error"></p>
-
-            <p class="contact-form__captcha"></p>
-            <label for="captcha-answer" class="label"></label>
-            <input type="text" name="" id="captcha-answer" class="contact-form__captcha-answer">
-            <p class="contact-form__captcha-error"></p>
+            <div>
+                <label for="name" class="label">Imię<sup>*</sup></label>
+                <input type="text" name="name" id="name" class="contact-form__name" placeholder="Imię" required>
+            </div>
+            <p class="contact-form__name-error error"></p>
 
 
-            <input type="submit" value="Wyślij wiadomość" class="contact-form__submit">
+            <div>
+                <label for="surname" class="label">Nazwisko<sup>*</sup></label>
+                <input type="text" name="surname" id="surname" class="contact-form__surname" placeholder="Nazwisko"
+                    required>
+            </div>
+            <p class="contact-form__surname-error error"></p>
+
+
+            <div>
+                <label for="mail" class="label">Adres e-mail<sup>*</sup></label>
+                <input type="email" name="mail" id="mail" class="contact-form__mail" placeholder="E-mail" required>
+            </div>
+            <p class="contact-form__mail-error error"></p>
+
+
+            <div>
+                <label for="phone" class="label">Tel. komórkowy<sup>*</sup></label>
+                <input type="number" name="phone" id="phone" class="contact-form__phone" placeholder="Tylko liczby"
+                    required>
+            </div>
+            <p class="contact-form__phone-error error"></p>
+
+
+            <div>
+                <label for="www" class="label">Adres strony do poprawy<sup>*</sup></label>
+                <input type="url" name="www" id="www" class="contact-form__www" placeholder="http://facebook.com"
+                    required>
+            </div>
+            <p class="contact-form__www-error error"></p>
+
+
+            <div>
+                <label for="problem" class="label">Opis zmian na stronie<sup>*</sup></label>
+                <textarea name="problem" id="problem" class="contact-form__problem"
+                    placeholder="Powiedz nam co chcesz zmienić" required></textarea>
+            </div>
+            <p class="contact-form__problem-error error"></p>
+
+
+            <div>
+
+                <label for="captcha-answer" class="label">Podaj wynik działania<sup>*</sup></label>
+                <p class="contact-form__captcha"></p>
+                <input type="text" name="" id="captcha-answer" class="contact-form__captcha-answer"
+                    placeholder="Liczba niecałkowita tylko z kropką">
+            </div>
+            <p class="contact-form__captcha-error error"></p>
+
+
+            <input type="submit" value="Wyślij" class="contact-form__submit">
         </form>
     </section>
 
-    
+
 
     <script src="main.js"></script>
 </body>
