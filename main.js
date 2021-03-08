@@ -78,41 +78,20 @@ let randomNumber = () => {
 
 
     if (mathOperation === 1) {
-        console.log('Podaj wynik dodawania')
-        console.log(a)
-        console.log(b)
-        console.log(a + b)
-
         answer = a + b;
         captcha.innerText = `${a} + ${b}`;
-
     } else if (mathOperation === 2) {
-        console.log('Podaj wynik odejmowania')
-        console.log(a)
-        console.log(b)
-        console.log(a - b);
-
         answer = a - b;
         captcha.innerText = `${a} - ${b}`;
     } else if (mathOperation === 3) {
-        console.log('Podaj wynik mnożenia');
-        console.log(a)
-        console.log(b)
-        console.log(a * b)
-
         answer = a * b;
         captcha.innerText = `${a} * ${b}`;
     } else if (mathOperation === 4) {
-        console.log('Podaj wynik dzielenia');
-        console.log(a)
-        console.log(2)
-        console.log(a / 2)
-
         answer = a / 2;
         captcha.innerText = `${a} / 2`
     }
     else {
-        console.log('Coś poszło nie tak, odśwież stronę');
+        captcha.innerText = 'Coś poszło nie tak, odśwież stronę';
     }
 }
 
@@ -135,7 +114,6 @@ let sendMessage = (e) => {
     if (captchaAnswer.value == answer && firstName.value.length >= 3 && surname.value.length >= 3
         && regMail.test(mail.value) && regTel.test(phone.value) && regWww.test(www.value) && problem.value.length >= 50
     ) {
-        console.log('brawo, dobry wynik')
         window.open('summary.html', 'target="_blank"');
     } else {
         e.preventDefault();
