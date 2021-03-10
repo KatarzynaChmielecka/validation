@@ -6,15 +6,22 @@
 
 body {
   background-image: url("../images/rain-5213306_1920.jpg");
-  font-size: 10px;
+  font-size: 62.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 body .contact-wrapper {
-  width: 50%;
-  margin: auto;
+  width: 70%;
+  margin: 5px 0;
 }
 
 body .contact-wrapper .contact-form {
+  margin: 10% 0;
   background: rgba(255, 255, 255, 0.251);
   -webkit-box-shadow: 0 8px 32px 0 #1f26875e;
           box-shadow: 0 8px 32px 0 #1f26875e;
@@ -104,11 +111,21 @@ body .contact-wrapper .contact-form .contact-form__submit {
   border-radius: 10px;
   border: none;
   font-size: 1em;
+  margin: 0 0 5px 0;
 }
 
 body .contact-wrapper .contact-form .contact-form__submit:hover {
   background: #ffffff;
   color: #060128a6;
   font-weight: bold;
+}
+
+@media screen and (max-width: 750px) {
+  body .contact-wrapper {
+    width: 95%;
+  }
+  body .contact-wrapper .contact-form div {
+    width: 80%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

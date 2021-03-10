@@ -91,7 +91,7 @@ let randomNumber = () => {
         captcha.innerText = `${a} / 2`
     }
     else {
-        captcha.innerText = 'Coś poszło nie tak, odśwież stronę';
+        captcha.innerText='Coś poszło nie tak, odśwież stronę';
     }
 }
 

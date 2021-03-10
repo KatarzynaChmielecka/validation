@@ -1,5 +1,5 @@
 $primaryBackground: rgba(255, 255, 255, 0.251);
-$primaryFontSize:10px;
+$primaryFontSize:62.5%;
 
 
 * {
@@ -9,15 +9,17 @@ $primaryFontSize:10px;
 }
 
 body {
-
     background-image: url("../images/rain-5213306_1920.jpg");
     font-size: $primaryFontSize;
+    display: flex;
+    justify-content: center;
 
     .contact-wrapper {
-        width: 50%;
-        margin: auto;
+        width: 70%;
+        margin: 5px 0;
 
         .contact-form {
+            margin: 10% 0;
             background: $primaryBackground;
             box-shadow: 0 8px 32px 0 #1f26875e;
             backdrop-filter: blur(4px);
@@ -68,11 +70,27 @@ body {
                 border-radius: 10px;
                 border: none;
                 font-size: 1em;
+                margin: 0 0 5px 0;
 
                 &:hover {
                     background: #ffffff;
                     color: #060128a6;
                     font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 750px) {
+    body {
+        .contact-wrapper {
+            width: 95%;
+
+            .contact-form {
+                div {
+                    width: 80%
                 }
             }
         }
