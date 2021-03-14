@@ -99,10 +99,12 @@ const randomNumber = (operationSign) => {
     const a = Math.floor(Math.random() * 10 + 1);
     const b = Math.floor(Math.random() * 10 + 1);
 
-    if (operationSign === "/" && !Number.isInteger(a / b))
+    if (operationSign === "/" && !Number.isInteger(a / b)) {
         randomOperation();
-
-    setCaptcha(operationSign, a, b);
+    }
+    else {
+        setCaptcha(operationSign, a, b);
+    }
 }
 
 const setCaptcha = (operationSign, a, b) => {
@@ -123,8 +125,8 @@ const setCaptcha = (operationSign, a, b) => {
             break;
         case "/":
             answer = a / b;
-            captcha.innerText = `${a} / ${b}`;console.log(a); console.log(b); console.log(answer);
-            break; 
+            captcha.innerText = `${a} / ${b}`; console.log(a); console.log(b); console.log(answer);
+            break;
         default:
             captcha.innerText = 'Coś poszło nie tak, odśwież stronę';
             randomOperation()
@@ -145,7 +147,7 @@ const saveSummary = () => {
 let sendMessage = (e) => {
     errors();
     saveSummary();
-    setCaptcha();
+
     if (captchaAnswer.value == answer && firstName.value.length >= 3 && surname.value.length >= 3
         && regMail.test(mail.value) && regTel.test(phone.value) && regWww.test(www.value) && problem.value.length >= 50
     ) {
