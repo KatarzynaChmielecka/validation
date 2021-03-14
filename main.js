@@ -69,34 +69,69 @@ const errors = () => {
     }
 }
 
-let a = Math.floor(Math.random() * 10 + 1);
-let b = Math.floor(Math.random() * 10 + 1);
 let answer;
 
-let randomNumber = () => {
-    let mathOperation = Math.floor(Math.random() * 4 + 1);
+const randomOperation = () => {
+    const mathOperation = Math.floor(Math.random() * 4 + 1);
+    let operationSign;
 
-
-    if (mathOperation === 1) {
-        answer = a + b;
-        captcha.innerText = `${a} + ${b}`;
-    } else if (mathOperation === 2) {
-        answer = a - b;
-        captcha.innerText = `${a} - ${b}`;
-    } else if (mathOperation === 3) {
-        answer = a * b;
-        captcha.innerText = `${a} * ${b}`;
-    } else if (mathOperation === 4) {
-        answer = a / 2;
-        captcha.innerText = `${a} / 2`
+    switch (mathOperation) {
+        case 1:
+            operationSign = "+";
+            break;
+        case 2:
+            operationSign = "-";
+            break;
+        case 3:
+            operationSign = "*";
+            break;
+        case 4:
+            operationSign = "/";
+            break;
+        default:
+            console.error('Błąd losowania');
+            randomOperation();
     }
-    else {
-        captcha.innerText='Coś poszło nie tak, odśwież stronę';
+    randomNumber(operationSign);
+}
+
+const randomNumber = (operationSign) => {
+    const a = Math.floor(Math.random() * 10 + 1);
+    const b = Math.floor(Math.random() * 10 + 1);
+
+    if (operationSign === "/" && !Number.isInteger(a / b))
+        randomOperation();
+
+    setCaptcha(operationSign, a, b);
+}
+
+const setCaptcha = (operationSign, a, b) => {
+    switch (operationSign) {
+
+        case "+":
+            answer = a + b;
+            captcha.innerText = `${a} + ${b}`;
+            console.log(a); console.log(b); console.log(answer);
+            break;
+        case "-":
+            answer = a - b;
+            captcha.innerText = `${a} - ${b}`; console.log(a); console.log(b); console.log(answer);
+            break;
+        case "*":
+            answer = a * b;
+            captcha.innerText = `${a} * ${b}`; console.log(a); console.log(b); console.log(answer);
+            break;
+        case "/":
+            answer = a / b;
+            captcha.innerText = `${a} / ${b}`;console.log(a); console.log(b); console.log(answer);
+            break; 
+        default:
+            captcha.innerText = 'Coś poszło nie tak, odśwież stronę';
+            randomOperation()
     }
 }
 
-
-randomNumber();
+randomOperation();
 
 const saveSummary = () => {
     localStorage.setItem('firstName', firstName.value);
@@ -110,7 +145,7 @@ const saveSummary = () => {
 let sendMessage = (e) => {
     errors();
     saveSummary();
-
+    setCaptcha();
     if (captchaAnswer.value == answer && firstName.value.length >= 3 && surname.value.length >= 3
         && regMail.test(mail.value) && regTel.test(phone.value) && regWww.test(www.value) && problem.value.length >= 50
     ) {
