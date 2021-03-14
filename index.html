@@ -13,14 +13,15 @@
     <section class="contact-wrapper">
         <form action="" class="contact-form" novalidate>
 
-            <h3 class="contact-form__title">Skontaktuj się z nami <br>(pola oznaczone gwiazdką są obowiązkowe)</h3>
+            <h3 class="contact-form__title">Skontaktuj się z nami <br>
+                <h6><sup>*</sup>pola oznaczone gwiazdką są obowiązkowe</h6>
+            </h3>
 
             <div>
                 <label for="name" class="contact-form__label">Imię<sup>*</sup></label>
                 <input type="text" name="name" id="name" class="contact-form__name" placeholder="Imię" required>
             </div>
             <p class="contact-form__name-error error"></p>
-
 
             <div>
                 <label for="surname" class="contact-form__label">Nazwisko<sup>*</sup> </label>
@@ -29,13 +30,11 @@
             </div>
             <p class="contact-form__surname-error error"></p>
 
-
             <div>
                 <label for="mail" class="contact-form__label">Adres e-mail<sup>*</sup></label>
                 <input type="email" name="mail" id="mail" class="contact-form__mail" placeholder="E-mail" required>
             </div>
             <p class="contact-form__mail-error error"></p>
-
 
             <div>
                 <label for="phone" class="contact-form__label">Tel. komórkowy<sup>*</sup></label>
@@ -44,7 +43,6 @@
             </div>
             <p class="contact-form__phone-error error"></p>
 
-
             <div>
                 <label for="www" class="contact-form__label">Adres strony do poprawy<sup>*</sup></label>
                 <input type="url" name="www" id="www" class="contact-form__www" placeholder="http://facebook.com"
@@ -52,14 +50,12 @@
             </div>
             <p class="contact-form__www-error error"></p>
 
-
             <div>
                 <label for="problem" class="contact-form__label">Opis zmian na stronie<sup>*</sup></label>
                 <textarea name="problem" id="problem" class="contact-form__problem"
                     placeholder="Powiedz nam co chcesz zmienić" required></textarea>
             </div>
             <p class="contact-form__problem-error error"></p>
-
 
             <div>
 
@@ -70,12 +66,9 @@
             </div>
             <p class="contact-form__captcha-error error"></p>
 
-
             <input type="submit" value="Wyślij" class="contact-form__submit">
         </form>
     </section>
-
-
 
     <script src="main.js"></script>
 </body>

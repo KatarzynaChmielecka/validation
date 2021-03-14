@@ -107,9 +107,12 @@ body .contact-wrapper .contact-form .contact-form__submit {
   background: #060128a6;
   color: #ffffff;
   padding: 5px 10px;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
   border-radius: 10px;
   border: none;
-  font-size: 1em;
+  font-size: 1.6rem;
+  letter-spacing: 5px;
   margin: 0 0 5px 0;
 }
 
@@ -125,6 +128,19 @@ body .contact-wrapper .contact-form .contact-form__submit:hover {
   }
   body .contact-wrapper .contact-form div {
     width: 80%;
+  }
+}
+
+@supports not ((-webkit-backdrop-filter: blur()) or (backdrop-filter: blur())) {
+  body .contact-wrapper .contact-form div {
+    border-radius: 10px;
+  }
+  body .contact-wrapper .contact-form div .contact-form__label {
+    border-radius: 10px 10px 0 0;
+    background: #65a0c2;
+  }
+  body .contact-wrapper .contact-form div .contact-form__captcha {
+    background: #65a0c2;
   }
 }
 /*# sourceMappingURL=style.css.map */
