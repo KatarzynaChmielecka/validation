@@ -1,0 +1,45 @@
+@import '_vars.scss';
+
+:root {
+    font-size: $primaryFontSize;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: $background-image;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+
+    main {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .summary-wrapper {
+            height: fit-content;
+            display: flex;
+            justify-content: center;
+
+            .summary-table {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                font-size: 2rem;
+                background: $primaryBackground;
+                backdrop-filter: blur(4px);
+
+                .summary-table__heading {
+                    text-align: left;
+                    padding: 5px;
+                }
+            }
+        }
+    }
+}

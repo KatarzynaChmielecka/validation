@@ -28,42 +28,43 @@ const regWww = /^http:\/\/+\w+.\D{2,}/;
 const errors = () => {
     if (firstName.value.length < 3) {
         firstNameError.innerText = "Imię musi składać się z minimum 3 znaków";
-        firstNameError.style.color = "#d11507";
+        firstNameError.style.color = "#800000";
+       
     } else {
         firstNameError.innerText = '';
     }
 
     if (surname.value.length < 3) {
         surnameError.innerText = "Nazwisko musi składać się z minimum 3 znaków";
-        surnameError.style.color = "#d11507";
+        surnameError.style.color = "#800000";
     } else {
         surnameError.innerText = '';
     }
 
     if (!regMail.test(mail.value)) {
         mailError.innerText = "Wzór poprawnego maila: as2@gl.co";
-        mailError.style.color = "#d11507";
+        mailError.style.color = "#800000";
     } else {
         mailError.innerText = '';
     }
 
     if (!regTel.test(phone.value)) {
         phoneError.innerText = "Podaj 9-cyfrową liczbę dodatnią";
-        phoneError.style.color = "#d11507";
+        phoneError.style.color = "#800000";
     } else {
         phoneError.innerText = '';
     }
 
     if (!regWww.test(www.value)) {
         wwwError.innerText = "Wzór poprawnego adresu url: http://blog.pl";
-        wwwError.style.color = "#d11507";
+        wwwError.style.color = "#800000";
     } else {
         wwwError.innerText = '';
     }
 
     if (problem.value.length < 50) {
         problemError.innerText = "Wiadomość musi składać się z minimum 50 znaków";
-        problemError.style.color = "#d11507";
+        problemError.style.color = "#800000";
     } else {
         problemError.innerText = '';
     }
@@ -155,7 +156,7 @@ let sendMessage = (e) => {
     } else {
         e.preventDefault();
         captchaError.textContent = 'Podaj poprawną odpowiedź lub/i wypełnij poprawnie formularz';
-        captchaError.style.color = "#d11507";
+        captchaError.style.color = "#800000";
     }
 }
 

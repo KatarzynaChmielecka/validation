@@ -1,3 +1,7 @@
+:root {
+  font-size: 62.5%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,9 +9,8 @@
 }
 
 body {
-  background-image: url("../images/underwater-802092_1920.jpg");
+  background: url("../images/underwater.jpg");
   background-size: cover;
-  font-size: 62.5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,7 +44,7 @@ body .contact-wrapper .contact-form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 2em;
+  font-size: 2rem;
   text-align: center;
   line-height: 1.5;
 }
@@ -74,28 +77,28 @@ body .contact-wrapper .contact-form div .contact-form__problem {
 body .contact-wrapper .contact-form div input::-webkit-input-placeholder,
 body .contact-wrapper .contact-form div textarea::-webkit-input-placeholder {
   font-style: italic;
-  font-size: 1em;
+  font-size: 1rem;
   text-align: center;
 }
 
 body .contact-wrapper .contact-form div input:-ms-input-placeholder,
 body .contact-wrapper .contact-form div textarea:-ms-input-placeholder {
   font-style: italic;
-  font-size: 1em;
+  font-size: 1rem;
   text-align: center;
 }
 
 body .contact-wrapper .contact-form div input::-ms-input-placeholder,
 body .contact-wrapper .contact-form div textarea::-ms-input-placeholder {
   font-style: italic;
-  font-size: 1em;
+  font-size: 1rem;
   text-align: center;
 }
 
 body .contact-wrapper .contact-form div input::placeholder,
 body .contact-wrapper .contact-form div textarea::placeholder {
   font-style: italic;
-  font-size: 1em;
+  font-size: 1rem;
   text-align: center;
 }
 
@@ -111,7 +114,7 @@ body .contact-wrapper .contact-form .contact-form__submit {
           backdrop-filter: blur(4px);
   border-radius: 10px;
   border: none;
-  font-size: 1.6rem;
+  font-size: 2rem;
   letter-spacing: 5px;
   margin: 0 0 5px 0;
 }
